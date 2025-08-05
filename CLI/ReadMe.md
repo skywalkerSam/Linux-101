@@ -1,13 +1,3 @@
-<div align="center">
-    <a href="https://skywalkerSam.dev">
-        <img src="https://github.com/starboy-inc.png" alt="Starboy Logo" height=128>
-    </a>
-    <h1><a href="https://en.wikipedia.org/wiki/Algorithm">🥣 Algorithms</a></h1>
-    Some basic algrorithm implementations...
-</div>
-
-&nbsp;
-
 # [Getting Started with Linux](../Resources/Docs/Ubuntu%20Server%20CLI%20cheat%20sheet%202024%20v6.pdf)
 
 ## Help!?
