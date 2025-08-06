@@ -1,6 +1,4 @@
-# [Getting Started with Linux](../Resources/Docs/Ubuntu%20Server%20CLi%20cheat%20sheet%202024%20v6.pdf)
-
-&nbsp;
+# `CLI`: Command Line interface
 
 ## Help!?
 
@@ -10,7 +8,7 @@ command --help
 
 &nbsp;
 
-## Manuals (Help, man.)
+## Manuals (Help, Man.)
 
 ```shell
 man command
