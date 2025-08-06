@@ -1,4 +1,6 @@
-# [Getting Started with Linux](../Resources/Docs/Ubuntu%20Server%20CLI%20cheat%20sheet%202024%20v6.pdf)
+# [Getting Started with Linux](../Resources/Docs/Ubuntu%20Server%20CLi%20cheat%20sheet%202024%20v6.pdf)
+
+&nbsp;
 
 ## Help!?
 
@@ -6,31 +8,41 @@
 command --help
 ```
 
-Manuals
+&nbsp;
+
+## Manuals (Help, man.)
 
 ```shell
 man command
 ```
+
+&nbsp;
 
 ## Terminal
 
 - Get shit done without any bs.
 - `CTRL + D` or, `exit` to escape anytime.)
 
+&nbsp;
+
 ## Shells
 
-- Works between the terminal and the OS's kernel (like an API to the kernel)
+- Works between the terminal and the OS's kernel (like an APi to the kernel)
 - Bourne Again Shell ( bash )
 - powershell ( pwsh )
 - [zsh](https://ohmyz.sh)
 - fish
 - C Shell ( csh )
 
-<img src="../Resources/memes/linux_in_a_nutshell.jpg" alt="Linux Intro" width=540>
+&nbsp;
+
+<img src="../Resources/memes/linux_in_a_nutshell.jpg" alt="Linux intro" width=540>
+
+&nbsp;
 
 ## File System Navigation
 
-List items
+### List items
 
 ```shell
 ls
@@ -40,39 +52,43 @@ Optional tags
 
 `-l` `-al`
 
-## Print working directory
+### Print working directory
 
 ```shell
 pwd
 ```
 
-## Random bits.)
+### `NOTES`
 
 - `case-sensitive`
+
 - use `TAB`
 
-## Change Directory
+### Change Directory
 
 ```shell
 cd Downloads
 ```
 
-<!-- ![cd downloads result](../Resources/memes/cd_downloads.jpg) -->
+&nbsp;
+
 <img src="../Resources/memes/cd_downloads.jpg" alt="not found" width=450>
 
-## Go back
+&nbsp;
+
+### Go back
 
 ```shell
 cd ..
 ```
 
-Hop between path/directories
+### Hop between path/directories
 
 ```shell
 cd -
 ```
 
-## Go home
+### Go home
 
 ```shell
 cd
@@ -84,100 +100,107 @@ Or,
 cd ~
 ```
 
+&nbsp;
+
 ## Working with Files & Directories
 
-## Create a file
+### Create a file
 
 ```shell
 touch filename.extension
 ```
 
-## Create a Directory
+### Create a Directory
 
 ```shell
 mkdir directory-name
 ```
 
-## Multiple directories
+### Multiple directories
 
 ```shell
 mkdir directory1 directory2 directory3
 ```
 
-## Nested directories
+### Nested directories
 
 ```bash
 mkdir someDir/oneDir/anotherDir -p
 ```
 
-## Show file contents
+### Show file contents
 
 ```shell
 cat filename.extension
 ```
 
-With index
+### With index
 
 ```shell
 cat -n filename
 ```
 
-## Write & Save
+### Write & Save
 
 ```shell
 echo "Write something here" > filename.extension
 ```
 
-## Write & Save to an _existing file_
+### Write & Save to an _existing file_
 
 ```shell
 echo "Write something here" >> filename.extension
 ```
 
-## Move file
+### Move file
 
 ```shell
 mv this_file.extension to-this-directory
 ```
 
-## Move Directory
+### Move Directory
 
 ```shell
 mv move-this-directory to-this-directory
 ```
 
-## Copy file's contents to another file
+### Copy file's contents to another file
 
 ```shell
 cp this_file.extension to_this_file.extension
 ```
 
-## Copy file's contents to another Directory's File
+### Copy file's contents to another Directory's File
 
 ```shell
 cp this_file.extension to-this-directory/then_to_this_file.extension
 ```
 
-## Remove a file
+### Remove a file
 
 ```shell
 rm filename.extension
 ```
 
-## Remove a Directory
+### Remove a Directory
 
 ```shell
 rm -r directory-name
 ```
 
-## **Remove Everything** _recursively_
+&nbsp;
+
+## **Remove Everything** (_recursively_!)
 
 - `Be careful` while using this one!
+
 - Never run this command on `root` ( / ) or, it'll destroy the entire operating system!
 
 ```shell
 rm -r *
 ```
+
+&nbsp;
 
 ## Nano
 
@@ -188,6 +211,8 @@ nano filename.extension
 - Edit file, if it's not found, it creates a new file
 - Write & CTRL + O, to write out & press enter to confirm
 - CTRL + X, exit nano...
+
+&nbsp;
 
 ## Vim
 
@@ -202,16 +227,24 @@ nvim filename.extension
 ```
 
 - press `i` to insert & write...
+
 - `ESC` to exit insert mode
+
 - `:wq` to Write & Quit
+
 - `:q` to Quit
 
-<!-- ![Choosing an Editor](../Resources/memes/choosing_an_editor.jpg) -->
+&nbsp;
+
 <img src="../Resources/memes/choosing_an_editor.jpg" alt="Choosing an editor" width=450>
+
+&nbsp;
 
 ## Network Management
 
 - press `q` to quit or, `CTRL + C` to cancel.
+
+&nbsp;
 
 ## Status
 
@@ -219,7 +252,9 @@ nvim filename.extension
 networkctl status
 ```
 
-## IP & MAC
+&nbsp;
+
+## iP & MAC
 
 - Requires `net-tools`
 
@@ -235,137 +270,191 @@ networkctl status
 ip route
 ```
 
-## FirewallS
+&nbsp;
+
+## Firewall
 
 - **ufw**
 
-## Enable
+### Enable
 
 ```shell
 sudo ufw enable
 ```
 
-## Firewall Status
+### Status
 
 ```shell
 sudo ufw status
 ```
 
-## Allow permissionS
+### Permissions
 
 ```shell
 sudo ufw allow port_number
 ```
 
+&nbsp;
+
 ![Firewall in a nutshell](../Resources/memes/firewall.jpg)
+
+&nbsp;
 
 ## SSH
 
 - Connect to a system/server through `ssh`
-- Replace `192.168.0.103` with your `Server's IP`
+
+- Replace `192.168.0.103` with your `Server's iP`
+
+&nbsp;
 
 ```shell
 ssh username@your_server_ip
 ```
 
-Like,
+### Like this:
 
 ```shell
 ssh sam@192.168.0.103
 ```
 
-## Allow SSH's port `22` to start listening for incoming connections
+&nbsp;
+
+- Allow SSH's port `22` to start listening for incoming connections
 
 - if you're using a firewall that is, `ufw`
+
+&nbsp;
 
 ```shell
 sudo ufw allow 22
 ```
 
+&nbsp;
+
 ## APT: The Package Manager
 
 - _Debian/Ubuntu_ Systems
 
-## Search for a packages
+### Search
 
 ```shell
 apt search package-name
 ```
 
-## Install a package
+### install
 
 ```shell
 sudo apt install package-name
 ```
 
-## Remove a package
+### Remove
 
 ```shell
 sudo apt remove package-name
 ```
 
-## Remove _unnecessary/cached_ packages
+### Remove _unnecessary/cached_ packages
 
 ```shell
 sudo apt autoremove
 ```
 
-## Getting started _packages_
+&nbsp;
+
+## Some useful _packages_
 
 - htop
+
 - bpytop
+
 - neofetch
+
 - screenfetch
+
 - vim
+
 - git
+
 - espeak
+
 - figlet
+
 - curl
+
 - wget
+
 - tree
+
 - mlocate
+
 - terminator
+
 - vlc
+
 - python3
+
 - python3-pip
+
 - python3-pyaudio
+
 - postgresql
+
 - nodejs
+
 - net-tools
+
 - ufw
+
 - ssh
+
 - tor
+
 - proxychains
+
 - wireshark
+
 - gnome-clocks
+
 - gnome-todo
+
 - gnome-tweaks
+
 - thunar
+
 - dolphin
+
 - libreoffice
+
 - gimp
+
 - android-tools-adb
+
 - android-tools-fastboot
-- sl ( Train Animation\* )
+
+- sl (Train Animation\*)
+
 - docker
 
-<!-- ![What you see isn't all there is](../Resources/memes/what_you_see_isnt_all_there_is_.jpg) -->
+&nbsp;
 
-## Install a snap package
+## install a snap package
 
-`snap:` The ubuntu package manager
+- `snap`: Ubuntu's package manager
 
-- _--classic_ \*if required
+&nbsp;
 
 ```shell
 sudo snap install package-name
 ```
 
+### _--classic_ \*if required
+
 ```shell
 sudo snap install package-name --classic
 ```
 
-## List the changes associated with the snap
+### Changes
 
 ```shell
 snap changes package-name
@@ -375,7 +464,7 @@ snap changes package-name
 snap changes nextcloud
 ```
 
-## Info about the snap
+### info
 
 ```shell
 snap info package-name
@@ -385,7 +474,7 @@ snap info package-name
 snap info nextcloud
 ```
 
-## Snap Connections
+### Connections
 
 ```shell
 snap connections package-name
@@ -395,54 +484,71 @@ snap connections package-name
 snap connections nextcloud
 ```
 
-## Remove a snap package
+### Remove a snap
 
 ```shell
 sudo snap remove package-name
 ```
 
-## Getting started _snap-packages_
+&nbsp;
+
+## Some useful _snap-packages_
 
 - code (VS Code)
+
 - spotify (_--classic_)
+
 - postman
+
 - chromium
+
 - firefox
+
 - nextcloud
+
 - pycharm
+
 - microk8s
 
-## Installing a `.deb` package
+&nbsp;
 
-- _Debian/Ubuntu_ Systems
+## install a `.deb` package
 
-## Give a package `executable` permission
+- For _Debian/Ubuntu_ systems
+
+&nbsp;
+
+### `executable` permission!
 
 ```shell
 chmod +x package-name
 ```
 
-## Install a package
+### install the package
 
 ```shell
 sudo apt install ../Resources/memes/package-name.deb
 ```
 
-## pacman: The Package Manager
+&nbsp;
+
+## `pacman`: The Arch Package Manager
 
 - _Arch_ based systems
+
 - _AUR_, another way to install packages on Arch based systems
 
-<!-- ![I use Arch btw](../Resources/memes/i_use_arch_btw.jpg) -->
+&nbsp;
+
 <img src="../Resources/memes/i_use_arch_btw.jpg" alt="i use arch btw*" width=450>
 
-## Update & Upgrade
+### Update & Upgrade
 
 ```shell
 sudo pacman -Syu
 ```
 
-## Install an arch package
+### install an arch package
 
 ```shell
 sudo pacman -Sy package-name
@@ -452,24 +558,29 @@ sudo pacman -Sy package-name
 sudo pacman -S package-name
 ```
 
-## Remove an arch package
+### Remove an arch package
 
 ```shell
 sudo pacman -R package-name
 ```
 
-## Remove a package along with its dependencies
+### Remove a package along with its dependencies
 
 ```shell
 sudo pacman -Rs package-name
 ```
 
-## DNF: The Package Manager
+&nbsp;
+
+## `DNF`: The Fedora Package Manager
 
 - _Fedora_ based systems ( Red Hat, RHEL )
+
 - Successor to _YUM_
 
-## Update & Upgrade
+&nbsp;
+
+## Update & Upgrade fedora
 
 ```shell
 sudo dnf update
@@ -479,61 +590,67 @@ sudo dnf update
 sudo dnf upgrade
 ```
 
-## Search a package
+### Search a package
 
 ```shell
 dnf search package-name
 ```
 
-## Install a package
+### install a package
 
 ```shell
 sudo dnf install package-name
 ```
 
-## Remove a package
+### Remove a package
 
 ```shell
 sudo dnf remove package-name
 ```
 
-## Clear package cache
+### Clear package cache
 
 ```shell
 sudo dnf autoremove
 ```
 
-## Installing a _.rpm_ package
+&nbsp;
+
+## installing a `.rpm` package
 
 - Fedora/RHEL Systems
 
-## \*Executable permissions
+&nbsp;
+
+### \*Executable permissions
 
 ```shell
 chmod +x package-name
 ```
 
-## Install the package
+### installation
 
 ```shell
 sudo dnf install ../Resources/memes/package-name.rpm
 ```
 
+&nbsp;
+
 ## System Management
 
-## Date & Time
+### Date & Time
 
 ```shell
 date
 ```
 
-## Uptime
+### Uptime
 
 ```shell
 uptime
 ```
 
-## Reboot
+### Reboot
 
 ```shell
 reboot
@@ -543,7 +660,7 @@ reboot
 sudo reboot
 ```
 
-## Power Off/Shutdown
+### Shutdown/poweroff
 
 ```shell
 poweroff
@@ -553,13 +670,17 @@ poweroff
 sudo poweroff
 ```
 
+&nbsp;
+
 ## Run the previous command w/ _superuser_
 
 ```shell
 sudo !!
 ```
 
-Or, use `the-fuck`
+Or, use `the-fuck` package.)
+
+&nbsp;
 
 ## Update
 
@@ -567,15 +688,21 @@ Or, use `the-fuck`
 sudo apt update
 ```
 
+&nbsp;
+
 ## Upgrade
 
 ```shell
 sudo apt upgrade
 ```
 
-## Update & Upgrade
+&nbsp;
+
+## Update & Upgrade System
 
 - `-y` for auto-confirmation
+
+&nbsp;
 
 ```shell
 sudo apt update && sudo apt upgrade
@@ -585,16 +712,21 @@ sudo apt update && sudo apt upgrade
 sudo apt update ; sudo apt upgrade -y
 ```
 
-## Switch to superuser
+&nbsp;
 
-<!-- ![the responsibility](../Resources/memes/with_great_power_comes_great_responsibility.jpg) -->
-<img src="../Resources/memes/with_great_power_comes_great_responsibility.jpg" alt="With great power comes..." width=450>
+## Switch to `superuser`
 
 ```shell
 sudo su
 ```
 
-## System status
+&nbsp;
+
+<img src="../Resources/memes/with_great_power_comes_great_responsibility.jpg" alt="With great power comes..." width=450>
+
+&nbsp;
+
+## System Status
 
 - press `q` to quit
 
@@ -602,21 +734,29 @@ sudo su
 systemctl status
 ```
 
+&nbsp;
+
 ## Date-Time
 
 ```shell
 timedatectl status
 ```
 
-## `System` information
+&nbsp;
+
+## System info
 
 ```shell
 uname -a
 ```
 
-# Disks
+&nbsp;
 
-- Use `Disks` application for disk management ( GUI )
+## Disks
+
+- Use `Disks` application for disk management ( GUi )
+
+&nbsp;
 
 ```shell
 df -h
@@ -626,9 +766,9 @@ df -h
 lsblk
 ```
 
-`TIP:` Choose the disk's name carefully!
+`Note`: Choose the disk's name carefully!
 
-## Mount
+### Mount
 
 ```shell
 sudo mkdir /mnt/external
@@ -638,19 +778,19 @@ sudo mkdir /mnt/external
 sudo mount /dev/sdX1 /mnt/external
 ```
 
-## Navigate to the disk
+### Navigate to the disk
 
 ```shell
 cd /mnt/external
 ```
 
-## Unmount the disk
+### Unmount the disk
 
 ```shell
 umount /mnt/external
 ```
 
-## Auto-Mount Functionality\*
+### Auto-Mount Functionality\*
 
 - Replace `ext4` with your disk format like... `ntfs` `btrfs` `exfat` `fat32` in the following...
 
@@ -658,21 +798,27 @@ umount /mnt/external
 sudo vim /etc/fstab
 ```
 
-## Write the follwing inside the file
+### Write the follwing inside the file
 
 ```shell
 /dev/sdX1 /mnt/external ext4 defaults 0 0
 ```
 
-## Random bits, Pt-II
+### More `Notes`
 
 - Use `TAB` for auto-completion
-- press `CTRL + C` to cancel an ongoing operation
-- `CTRL + D` to quit
-- `CTRL + SHIFT + C` to copy something from the terminal
-- `CTRL + SHIFT + V` to paste something to the terminal
 
-## Help?
+- press `CTRL + C` to cancel an ongoing operation
+
+- `CTRL + D` to quit
+
+- `CTRL + SHiFT + C` to copy something from the terminal
+
+- `CTRL + SHiFT + V` to paste something to the terminal
+
+&nbsp;
+
+## Help, Again...?
 
 ```shell
 command --help
@@ -682,36 +828,40 @@ command --help
 man command
 ```
 
-## List of Main Commands
-
-```shell
-command --help
-```
+&nbsp;
 
 ## Wipe the System
 
-Fuck the system beyond recovery, unless you're running a _VM_ .)
+- Fuck the system beyond recovery, unless you're running a _VM_ .)
 
-- Wipes the entire system!
+- Wipes out the entire system!
+
+&nbsp;
 
 ```shell
 sudo rm -rf /*
 
 ```
 
+&nbsp;
+
 ![Did you experience fear?](../Resources/memes/fear.jpg)
 
 With time, you'll get used to it...
 
+&nbsp;
+
 ## PowerShell
 
-- `Windows` Systems
-- It's like if `cmd` & `bash` had a child ;)
-- In a general sense, it's `not case-sensitive`!
+- For `Windows` based Systems
 
-## winget: The Windows Package Manager
+- it's like if `cmd` & `bash` had a child .)
 
-## Search
+&nbsp;
+
+## `winget`: The Windows Package Manager
+
+### Search a winget package
 
 ```shell
 winget search package-name
@@ -721,7 +871,7 @@ winget search package-name
 winget search vscode
 ```
 
-## Install a winget package
+### install a winget package
 
 ```shell
 winget install author.package-name
@@ -731,41 +881,43 @@ winget install author.package-name
 winget install Microsoft.VisualStudioCode
 ```
 
-`Tip:` Here, smallcase works too.)
+`Note`: Here, smallcase works too.)
 
 ```shell
 winget install microsoft.visualstudiocode
 ```
 
-## `Create` a file
+### Create a file
 
 ```shell
 ni filename.extension
 ```
 
-## Remove some file
+### Remove file
 
 ```shell
 rm filename.extension
 ```
 
-## `Create` some directory
+### Create a directory
 
 ```shell
 mkdir directory-name
 ```
 
-## Remove some directory
+### Remove directory
 
 ```shell
 rm directory-name
 ```
 
-## Remove some directory forcefully\*
+### Remove directory (--force)
 
 ```shell
 rm -r -fo directory-name
 ```
+
+&nbsp;
 
 ![Was the use of force necessary?](../Resources/memes/use_of_force.jpg)
 
