@@ -364,6 +364,8 @@ sudo apt autoremove
 
 ## Some useful _packages_
 
+- top
+
 - htop
 
 - bpytop
@@ -386,11 +388,19 @@ sudo apt autoremove
 
 - tree
 
-- mlocate
+- plocate (previously mlocate)
 
 - terminator
 
+- tmux
+
+- yakuake (for **KDE**)
+
+- guake (for **GNOME**)
+
 - vlc
+
+- ffmpeg
 
 - python3
 
@@ -400,7 +410,7 @@ sudo apt autoremove
 
 - postgresql
 
-- nodejs
+- nodejs (use **nvm** instead!)
 
 - net-tools
 
@@ -432,7 +442,7 @@ sudo apt autoremove
 
 - android-tools-fastboot
 
-- sl (Train Animation\*)
+- sl (Train animation on mispell.)
 
 - docker
 
